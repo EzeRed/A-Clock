@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family-Poppins&display-swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "poppins", sans-serif;
+    background-color: black;
+    color: white;
+    transition: transform 0.25s;;
+}
+body:hover {
+    transform: scale(1.7);
+}
+
+.container {
+    position: relative;
+}
+
+
+.clock {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    border: 8px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg*var(--i)));
+    inset: 12px;
+    text-align: center;
+    
+}
+.clock span b {
+    transform: rotate(calc(-30deg*var(--i)));
+    display: inline-block;
+    font-size: 2rem;
+}
+.clock::before {
+    content: "";
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+.hands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hands i {
+    position: absolute;
+    background: #fff;
+    width: 5px;
+    height: var(--h);
+    border-radius: 70px;
+}
